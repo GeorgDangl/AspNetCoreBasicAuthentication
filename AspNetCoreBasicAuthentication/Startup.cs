@@ -16,6 +16,8 @@ namespace AspNetCoreBasicAuthentication
 {
     public class Startup
     {
+        private static readonly string _inMemoryDbName = Guid.NewGuid().ToString();
+        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,7 +29,7 @@ namespace AspNetCoreBasicAuthentication
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseInMemoryDatabase(_inMemoryDbName));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
