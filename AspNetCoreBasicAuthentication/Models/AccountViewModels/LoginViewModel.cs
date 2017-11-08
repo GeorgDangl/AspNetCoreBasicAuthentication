@@ -9,8 +9,8 @@ namespace AspNetCoreBasicAuthentication.Models.AccountViewModels
     public class LoginViewModel
     {
         [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Username or Email")]
+        public string Identifier { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
