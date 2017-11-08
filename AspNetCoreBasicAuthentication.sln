@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreBasicAuthentication", "AspNetCoreBasicAuthentication\AspNetCoreBasicAuthentication.csproj", "{BAB0341F-8E76-4F7E-AC3E-FACB14F512B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreBasicAuthentication.Tests", "AspNetCoreBasicAuthentication.Tests\AspNetCoreBasicAuthentication.Tests.csproj", "{ED35799F-C94B-46A1-BC29-95A6C2BF69D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BAB0341F-8E76-4F7E-AC3E-FACB14F512B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAB0341F-8E76-4F7E-AC3E-FACB14F512B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAB0341F-8E76-4F7E-AC3E-FACB14F512B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED35799F-C94B-46A1-BC29-95A6C2BF69D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED35799F-C94B-46A1-BC29-95A6C2BF69D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED35799F-C94B-46A1-BC29-95A6C2BF69D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED35799F-C94B-46A1-BC29-95A6C2BF69D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
