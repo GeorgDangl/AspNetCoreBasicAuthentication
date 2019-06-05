@@ -34,7 +34,20 @@ namespace AspNetCoreBasicAuthentication.Authentication
             try
             {
                 var decodedCredentials = Convert.FromBase64String(encodedCredentials);
-                _splitDecodedCredentials = System.Text.Encoding.ASCII.GetString(decodedCredentials).Split(':');
+                var plainCredentials = System.Text.Encoding.ASCII.GetString(decodedCredentials);
+                // The username may not include colon per the RFC:
+                // https://tools.ietf.org/html/rfc2617#section-2
+                var colonIndex = plainCredentials.IndexOf(':');
+                if (colonIndex < 0)
+                {
+                    return false;
+                }
+
+                _splitDecodedCredentials = new string[]
+                {
+                    plainCredentials.Substring(0, colonIndex),
+                    plainCredentials.Substring(colonIndex + 1)
+                };
                 return true;
             }
             catch (FormatException)
